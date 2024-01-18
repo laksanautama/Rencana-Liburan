@@ -37,10 +37,24 @@ void tampilkanDetailTempat(const TempatWisataData& data, const string& namaTempa
         cout << "Tempat wisata tidak ditemukan." << endl;
     }
 }
-}
 
+int main() {
+    TempatWisataData tempatWisata = {
+        {"Yeongpyeong Ski Arena", {2, 5}},
+        {"Nami Island", {1, 4}},
+        {"Alpaca World", {0.5, 4}},  // Mengganti 1/2 dengan 0.5
+        {"Lotte World", {0.5, 4}},   // Mengganti 1/2 dengan 0.5
+        {"Namsan Tower", {0.5, 5}},  // Mengganti 1/2 dengan 0.5
+        {"Cheongpung Cable Car", {1, 4}},
+        {"Eco Green Campus", {1.5, 5}},
+        {"Songhae Park", {1, 5}}
+    };
 
-int main(){
+    char jawaban;
+    do {
+        // Menampilkan semua tempat wisata
+        tampilkanTempatWisata(tempatWisata);
+
 
 return 0;
 }
