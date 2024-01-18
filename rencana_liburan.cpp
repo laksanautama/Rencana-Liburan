@@ -21,6 +21,22 @@ void tampilkanTempatWisata(const TempatWisataData& data) {
     cout << "---------------------|-------------------|---------" << endl;
 
 
+    for (const auto& entry : data) {
+        cout << setw(20) << left << entry.first << setw(20) << entry.second.first << setw(10) << entry.second.second << endl;
+    }
+}
+// Menampilkan detail durasi dan rating berdasarkan nama tempat
+void tampilkanDetailTempat(const TempatWisataData& data, const string& namaTempat) {
+    auto it = data.find(namaTempat);
+    if (it != data.end()) {
+        cout << "\nDetail Tempat Wisata" << endl;
+        cout << "---------------------" << endl;
+        cout << "Durasi (hari): " << it->second.first << endl;
+        cout << "Rating: " << it->second.second << endl;
+    } else {
+        cout << "Tempat wisata tidak ditemukan." << endl;
+    }
+}
 }
 
 
